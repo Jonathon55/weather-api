@@ -7,10 +7,8 @@ const getWeather = async ({longitude, lattitude}) => {
     try {
        const response = await fetch(`${WEATHER_API_URL}/?lat=${lattitude}&lon=${longitude}&units=imperial&appid=${WEATHER_API_KEY}`);
        const weather = await response.json();
-
        return weather;
     } catch (error) {
-    //test error here
        throw new Error(error);
     }
   

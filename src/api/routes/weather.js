@@ -40,16 +40,19 @@ const { weatherController } = require('../controllers');
  *            schema:
  *              type: object
  *              properties:
- *                weather_type:
+ *                weather_feels:
  *                  type: string
  *                  description: Brief Description of the weather
- *                payment_redemptions:
+ *                weather_condition:
+ *                  type: string
+ *                  description: Weather Condition, Rain, Clouds Etc
+ *                alert:
  *                  type: object
- *                  description: An intacct payment redemption order entry create response
- *                shipper_virtual:
- *                  type: object
- *                  description: An Intacct shipper virtual create response
- * 
+ *                  description: if there is an alert will show alert
+ *       400:
+ *         description: Issue with Longitude or Lattitude
+ *       401:
+ *         description: Issue with Weather API Key
  */
 
 routes.get('/',  asyncMiddleware(weatherController.getWeather), (req, res, next) => {
