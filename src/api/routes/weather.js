@@ -56,7 +56,6 @@ const { weatherController } = require('../controllers');
  */
 
 routes.get('/',  asyncMiddleware(weatherController.getWeather), (req, res, next) => {
-    //if check make sure weather
     res.send(res.locals.getWeather);
 });
 
