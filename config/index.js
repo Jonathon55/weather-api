@@ -1,0 +1,23 @@
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const {
+ MASTER_DB_HOST,
+ MASTER_DB_USERNAME,
+ MASTER_DB_PASSWORD,
+ MASTER_DB_NAME,
+ MASTER_DB_PORT,
+ WEATHER_API_URL,
+ WEATHER_API_KEY
+} = process.env;
+
+module.exports = {
+ MASTER_DB_HOST,
+ MASTER_DB_USERNAME,
+ MASTER_DB_PASSWORD,
+ MASTER_DB_NAME,
+ MASTER_DB_PORT,
+ WEATHER_API_URL,
+ WEATHER_API_KEY
+}

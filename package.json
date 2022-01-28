@@ -1,0 +1,25 @@
+{
+  "name": "weather-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server/server",
+    "generate-docs": "node -r esm  src/config/cli_config/argv.js --definition src/config/swaggerDef.js  src/server/routes/*.js -o swagger.json && npx redoc-cli bundle swagger.json -o weather-api-docs.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "esm": "^3.2.25",
+    "express": "^4.17.2",
+    "node-fetch": "^3.2.0",
+    "swagger-jsdoc": "^6.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
